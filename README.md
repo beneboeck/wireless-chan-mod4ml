@@ -21,7 +21,7 @@ The diffusion model estimator is not part of the code, but we used the implement
   <li>To transform the <code>.mat</code> datasets to <code>.npy</code> run the <code>mat_to_py.py</code> file in <code>link_level_data/TDLCDL</code>. 
   It takes as input the particular system (<code>ofdm</code> or <code>mimo</code>), as well as the number of samples in the dataset, and the particular dataset (<code>tdl_a</code> , <code>tdl_b</code>,...). 
   <br> An example would be <code>python mat_to_py.py -system ofdm -n_samples 80000 -ds tdl_a</code></li>
-  <li>We included toy datasets with 2000 samples from the tdl-e and cdl-e link-level channel models as <code>.npy</code> files.</li>
+  <li>We included toy datasets with 2000 samples from the TDL-E and CDL-E link-level channel models as <code>.npy</code> files.</li>
 </ul>
  
 ## Requirements

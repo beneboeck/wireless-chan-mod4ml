@@ -24,7 +24,7 @@ The diffusion model estimator is not part of the code, but we used the implement
   <li>We included toy datasets with 2000 samples from the TDL-E and CDL-E link-level channel models as <code>.npy</code> files.</li>
 </ul>
  
-# Requirements
+ <b> Requirements </b><br>
 
 To be able to run these scripts you need the `5G Toolbox` of MATLAB. We used `MATLAB R2025b`.
 
@@ -41,7 +41,7 @@ To be able to run these scripts you need the `5G Toolbox` of MATLAB. We used `MA
   <li>We included toy datasets with 2000 samples from the QuaDRiGa rural scenario-level channel models as <code>.npy</code> files.</li>
 </ul>
  
-# Requirements
+ <b> Requirements </b><br>
 
 To be able to run these scripts you need the quadriga_src code in `scenario_level_data/QuaDRiGa`. Note that we already uploaded the source code of QuaDRiGa with its license included (Version 2021.07.12_v2.6.1-0). You can download the source code also (<a href="https://quadriga-channel-model.de/">here </a>).
 

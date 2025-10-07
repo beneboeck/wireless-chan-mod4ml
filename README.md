@@ -14,10 +14,10 @@ The diffusion model estimator is not part of the code, but we used the implement
 ## Generarting Link-Level Channel Data
 
 <ul>
-  <li>Run the scripts <code>link_level_data/TDLCDL/generate_cdl.m<code> or `link_level_data/TDLCDL/generate_tdl.m` to generate link-level channel data. You can customize the type of model (`TDL-A`, `TDL-B`, ..) as well as configuration parameters such as the number of subcarriers within the scripts. The datasets are stored in `link_level_data/TDLCDL.m`. The file names contain the type of model as well as the number of generated samples.</li>
-  <li>To transform the `.mat` datasets to `.npy` run the `mat_to_py.py` file in `link_level_data/TDLCDL`. It takes as input the particular system (`ofdm` or `mimo`), as well as the number of samples in the dataset, and the particular dataset (`tdl_a , `tdl_b`,...). An example would be 
-    `python mat_to_py.py -system ofdm -n_samples 80000 -ds tdl_a`
-  </li>We included toy datasets with 2000 samples from the tdl-e and cdl-e link-level channel models as `.npy` files.
+  <li>Run the scripts <code>link_level_data/TDLCDL/generate_cdl.m</code> or <code>link_level_data/TDLCDL/generate_tdl.m</code> to generate link-level channel data. You can customize the type of model (<code>TDL-A</code>, <code>TDL-B</code>, ..) as well as configuration parameters such as the number of subcarriers within the scripts. The datasets are stored in <code>link_level_data/TDLCDL.m</code>. The file names contain the type of model as well as the number of generated samples.</li>
+  <li>To transform the <code>.mat</code> datasets to <code>.npy</code> run the <code>mat_to_py.py</code> file in <code>link_level_data/TDLCDL</code>. It takes as input the particular system (<code>ofdm</code> or <code>mimo</code>), as well as the number of samples in the dataset, and the particular dataset (<code>tdl_a</code> , <code>tdl_b</code>,...). An example would be 
+    <code>python mat_to_py.py -system ofdm -n_samples 80000 -ds tdl_a</code>
+  </li>We included toy datasets with 2000 samples from the tdl-e and cdl-e link-level channel models as <code>.npy</code> files.
 </ul>
  
 ## Requirements

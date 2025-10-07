@@ -1,0 +1,8 @@
+{
+    "data_path": "link_level_data/ofdm_tdl_e_2000.npy",
+    "ds": "tdl_e",
+    "latent_dim": 2,
+    "n_training": 1500,
+    "n_test": 500,
+    "dir_path": "./results/results_compression/tdl_e/pca/2025-10-07_15-16-19_ds=tdl_e_latent_dim=2_n_training=1500_n_test=500"
+}

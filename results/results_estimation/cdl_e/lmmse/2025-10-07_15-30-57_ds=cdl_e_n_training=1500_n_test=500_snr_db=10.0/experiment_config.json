@@ -1,0 +1,8 @@
+{
+    "data_path": "link_level_data/mimo_cdl_e_2000.npy",
+    "ds": "cdl_e",
+    "n_training": 1500,
+    "n_test": 500,
+    "snr_db": 10.0,
+    "dir_path": "./results/results_estimation/cdl_e/lmmse/2025-10-07_15-30-57_ds=cdl_e_n_training=1500_n_test=500_snr_db=10.0"
+}

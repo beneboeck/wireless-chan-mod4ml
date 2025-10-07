@@ -1,0 +1,8 @@
+{
+    "data_path": "link_level_data/mimo_cdl_e_2000.npy",
+    "ds": "cdl_e",
+    "n_training": 1500,
+    "n_samples": 500,
+    "snr_db": 20.0,
+    "dir_path": "./results/results_generation/cdl_e/sCov/2025-10-07_15-27-21_ds=cdl_e_n_training=1500_n_samples=500_snr_db=20.0"
+}

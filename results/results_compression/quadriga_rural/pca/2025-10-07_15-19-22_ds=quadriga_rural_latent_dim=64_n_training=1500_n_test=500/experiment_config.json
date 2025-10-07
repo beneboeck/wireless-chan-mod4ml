@@ -1,8 +1,0 @@
-{
-    "data_path": "scenario_level_data/Quadriga/ofdm_quadriga_rural_2000.npy",
-    "ds": "quadriga_rural",
-    "latent_dim": 64,
-    "n_training": 1500,
-    "n_test": 500,
-    "dir_path": "./results/results_compression/quadriga_rural/pca/2025-10-07_15-19-22_ds=quadriga_rural_latent_dim=64_n_training=1500_n_test=500"
-}

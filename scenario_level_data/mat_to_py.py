@@ -21,7 +21,7 @@ def main():
         H_all_real = np.array(f['ofdm_channel_real'])
         H_all_imag = np.array(f['ofdm_channel_imag'])
 
-    # save complex valued data + normalize (shuffling is not necessary for these link-level datasets)
+    # save complex valued data + normalize (shuffling is not necessary as it was already in the QuaDRiGa script)
     H_all = H_all_real + 1j * H_all_imag
     H_all = np.transpose(np.squeeze(np.array(H_all)),(2,1,0))
     shape_H = np.prod(H_all.shape[1:])

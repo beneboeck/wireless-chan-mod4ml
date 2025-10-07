@@ -1,13 +1,14 @@
-# Wireless Channel Modeling for Machine Learning - A Critical View on Standardized Channel Models
+# Wireless Channel Modeling for Machine Learning - <br> A Critical View on Standardized Channel Models
 Welcome to the repository for the paper "Wireless Channel Modeling for Machine Learning - A Critical View on Standardized Channel Models". 
 
 ## Overview
 
-The provided code is split into different parts
+The provided code is split into different parts:
 <ul>
   <li>Code for generating link-level (TDL and CDL) channel data (using the 5G Toolbox of Matlab)</li>
   <li>Code for generating scenario-level (QuaDRiGa) channel data (using the QuaDRiGa source code)</li>
-  <li>Code for the linear methods, i.e., the PCA, the LMMSE estimator, and the sample covariance Gaussian sampling, as well as code for the Autoencoder for CSI compression.</li>
+  <li>Code for the Autoencoder applied to CSI compression.</li>
+  <li>Code for the linear methods, i.e., the PCA, the LMMSE estimator, and the sample covariance Gaussian sampling.</li>
 </ul>
 The diffusion model estimator is not part of the code, but we used the implementation from <a href="https://github.com/benediktfesl/Diffusion_channel_est">this repository</a>. Moreover, we refer to the <a href="https://www.deepmimo.net/">DeepMIMO website </a> for the DeepMIMO data generation.
 
@@ -26,7 +27,11 @@ The diffusion model estimator is not part of the code, but we used the implement
  
  <b> Requirements </b><br>
 
-To be able to run these scripts you need the `5G Toolbox` of MATLAB. We used `MATLAB R2025b`.
+To be able to run these scripts you need the `5G Toolbox` of MATLAB. We used `MATLAB R2025b`. Next to standard python packages you also require the `h5py` package.
+
+ <b> Comment </b><br>
+
+ Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and it took about a day for each dataset to get generated.
 
 ## Generating Scenario-Level Channel Data
 
@@ -43,7 +48,18 @@ To be able to run these scripts you need the `5G Toolbox` of MATLAB. We used `MA
  
  <b> Requirements </b><br>
 
-To be able to run these scripts you need the quadriga_src code in `scenario_level_data/QuaDRiGa`. Note that we already uploaded the source code of QuaDRiGa with its license included (Version 2021.07.12_v2.6.1-0). You can download the source code also <a href="https://quadriga-channel-model.de/">here</a>.
+To be able to run these scripts you need the quadriga_src code in `scenario_level_data/QuaDRiGa`. Note that we already uploaded the source code of QuaDRiGa with its license included (Version 2021.07.12_v2.6.1-0). You can download the source code also <a href="https://quadriga-channel-model.de/">here</a>. Next to standard python packages you also require the `h5py` package.
+
+ <b> Comment </b><br>
+
+ Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and it took about a day for each dataset to get generated.
+
+## Applying Signal Processing to the Datasets
+
+
+
+## Toy Examples
+
 
 
 ## Requirements

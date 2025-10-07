@@ -31,7 +31,7 @@ To be able to run these scripts you need the `5G Toolbox` of MATLAB. We used `MA
 
  <b> Comment </b><br>
 
- Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and it took about a day for each dataset to get generated.
+ Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and generated 80000 samples per channel model. It took about a day for each dataset to get generated.
 
 ## Generating Scenario-Level Channel Data
 
@@ -48,20 +48,41 @@ To be able to run these scripts you need the `5G Toolbox` of MATLAB. We used `MA
  
  <b> Requirements </b><br>
 
-To be able to run these scripts you need the quadriga_src code in `scenario_level_data/QuaDRiGa`. Note that we already uploaded the source code of QuaDRiGa with its license included (Version 2021.07.12_v2.6.1-0). You can download the source code also <a href="https://quadriga-channel-model.de/">here</a>. Next to standard python packages you also require the `h5py` package.
+To be able to run these scripts you need the quadriga_src code in `scenario_level_data/QuaDRiGa`. Note that we already uploaded the source code of QuaDRiGa with its license included (Version 2021.07.12_v2.6.1-0, only non-commercial use allowed!). You can download the source code also <a href="https://quadriga-channel-model.de/">here</a>. Next to standard python packages you also require the `h5py` package.
 
  <b> Comment </b><br>
 
- Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and it took about a day for each dataset to get generated.
+ Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and generated 80000 samples per channel model. It took about a day for each dataset to get generated.
 
-## Applying Signal Processing to the Datasets
+## Applying Signal Processing and Machine Learning on the Datasets
 
 
+
+<ul>
+  <li>To run the scripts covering the autoencoder, the PCA, the LMMSE estimator, and the Gaussian sampling, you need to execute the <code>main_compression_autoencoder.py</code>, <code>main_compression_pca.py</code>, <code>main_estimation_lmmse.py</code>, and <code>main_generation_sCov.py</code>, respectively. Each of these scripts take parser arguments as input.</li>
+  <li> <code>main_compression_autoencoder.py</code> takes the dataset (e.g., <code>quadriga_rural</code>, <code>tdl_a</code>, ...), the latent dimension, the number of training samples, the number of test samples and the device (e.g., <code>cpu</code>, <code>cuda:0</code>, <code>cuda:1</code>, ...) as parser arguments (Example: <code>python main_compression_autoencoder.py -ds quadriga_rural -latent_dim 64 -ntrain 60000 -ntest 10000 -device cuda:0</code> </li>
+  <li> <code>main_compression_pca.py</code> takes the dataset (e.g., <code>quadriga_rural</code>, <code>tdl_a</code>, ...), the latent dimension, the number of training samples and the number of test samples as parser arguments. Note that the latent dimension is meant complex valued, which is why it is twice the latent dimension (degree of freedom) in our work (Example: <code>python main_compression_pca.py -ds quadriga_rural -latent_dim 64 -ntrain 60000 -ntest 10000</code> </li>
+  <li> <code>main_estimation_lmmse.py</code> takes the dataset (e.g., <code>cdl_a</code>, <code>cdl_b</code>, ...), the number of training samples, the number of test samples, and the snr in dB as parser arguments (Example: <code>python main_estimation_lmmse.py -ds cdl_a -ntrain 60000 -ntest 10000 -snr_db 10</code> </li>
+  <li> <code>main_generation_sCov.py</code> takes the dataset (e.g., <code>cdl_a</code>, <code>cdl_b</code>, ...), the number of training samples, the number of samples to be generated, and the snr in dB (for the spectral efficiency evaluation) as parser arguments (Example: <code>python main_generation_sCov.py -ds cdl_a -ntrain 60000 -n_samples 10000 -snr_db 10</code> </li>
+</ul>
+
+Note that you need to have generated the matching dataset in `.npy` format beforehand. The `src` directory contains the dataset configuration file `configs/dataset.ini`. This file stores the path to the datasets. Note that if you adapt the number of generated samples, you also need to adapt the path names within this file (e.g., `data_path = link_level_data/ofdm_tdl_a_5000.npy` if you have generated 5000 samples with the TDL-A dataset). The corresponding section headers (e.g., `tdl_a` are used as the ds parser argument in the main files). The `src` directory also contains utility functions in `utils` that comprise the linear methods, evaluation methods and general organization methods such as the generation of directories for saving the results. It also contains the `modules` storing the autoencoder architecture.
+
+All main-files store the results in newly generated directories in the `results` directory. The results contain the `experiment_config.json` file as well as an `.npz` file that stores important results.
+
+<b> Requirements </b><br>
+
+Next to standard python package, you also require `torch`. We used  `python 3.10`, `pytorch 2.5.1` and `pytorch-cuda 12.1`.
 
 ## Toy Examples
 
+We have uploaded toy datasets. To test out whether the code works for you, you should immediately be able to run experiments with the following commands:
 
+<ul>
+  <li><code>python main_compression_pca.py -ds tdl_e -latent_dim 2 -ntrain 1500 -ntest 500</code></li>
+  <li><code>python main_estimation_lmmse.py -ds cdl_e -ntrain 1500 -ntest 500 -snr_db 10</code></li>
+</ul>
 
-## Requirements
-The code is tested with `python 3.10`, `pytorch 2.5.1` and `pytorch-cuda 12.1`.
+By doing so, there should be new directories in the `results` directory containing the results as `.npz` files. 
+
 

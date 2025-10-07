@@ -9,7 +9,7 @@ def main():
     # Path to your .mat file
     parser.add_argument('-system', '--system', type=str) # 'ofdm' or 'mimo'
     parser.add_argument('-n_samples', '--n_samples', type=int)
-    parser.add_argument('-ds', '--dataset', type=str) # 'tdl-a', 'tdl-b', 'tdl-c', 'tdl-d', 'tdl-e', 'cdl-a', 'cdl-b', 'cdl-c', 'cdl-d', 'cdl-e'
+    parser.add_argument('-ds', '--dataset', type=str) # 'tdl_a', 'tdl_b', 'tdl_c', 'tdl_d', 'tdl_e', 'cdl_a', 'cdl_b', 'cdl_c', 'cdl_d', 'cdl_e'
     args = parser.parse_args()
 
     path = './' + args.system + '_' + args.dataset + '_' + str(args.n_samples) + '.mat'

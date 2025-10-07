@@ -56,10 +56,9 @@ To be able to run these scripts you need the quadriga_src code in `scenario_leve
 
 ## Applying Signal Processing and Machine Learning on the Datasets
 
-
+To run the scripts covering the autoencoder, the PCA, the LMMSE estimator, and the Gaussian sampling, you need to execute the <code>main_compression_autoencoder.py</code>, <code>main_compression_pca.py</code>, <code>main_estimation_lmmse.py</code>, and <code>main_generation_sCov.py</code>, respectively. Each of these scripts take parser arguments as input.
 
 <ul>
-  <li>To run the scripts covering the autoencoder, the PCA, the LMMSE estimator, and the Gaussian sampling, you need to execute the <code>main_compression_autoencoder.py</code>, <code>main_compression_pca.py</code>, <code>main_estimation_lmmse.py</code>, and <code>main_generation_sCov.py</code>, respectively. Each of these scripts take parser arguments as input.</li>
   <li> <code>main_compression_autoencoder.py</code> takes the dataset (e.g., <code>quadriga_rural</code>, <code>tdl_a</code>, ...), the latent dimension, the number of training samples, the number of test samples and the device (e.g., <code>cpu</code>, <code>cuda:0</code>, <code>cuda:1</code>, ...) as parser arguments (Example: <code>python main_compression_autoencoder.py -ds quadriga_rural -latent_dim 64 -ntrain 60000 -ntest 10000 -device cuda:0</code> </li>
   <li> <code>main_compression_pca.py</code> takes the dataset (e.g., <code>quadriga_rural</code>, <code>tdl_a</code>, ...), the latent dimension, the number of training samples and the number of test samples as parser arguments. Note that the latent dimension is meant complex valued, which is why it is twice the latent dimension (degree of freedom) in our work (Example: <code>python main_compression_pca.py -ds quadriga_rural -latent_dim 64 -ntrain 60000 -ntest 10000</code> </li>
   <li> <code>main_estimation_lmmse.py</code> takes the dataset (e.g., <code>cdl_a</code>, <code>cdl_b</code>, ...), the number of training samples, the number of test samples, and the snr in dB as parser arguments (Example: <code>python main_estimation_lmmse.py -ds cdl_a -ntrain 60000 -ntest 10000 -snr_db 10</code> </li>
@@ -80,6 +79,7 @@ We have uploaded toy datasets. To test out whether the code works for you, you s
 
 <ul>
   <li><code>python main_compression_pca.py -ds tdl_e -latent_dim 2 -ntrain 1500 -ntest 500</code></li>
+  <li><code>python main_compression_pca.py -ds quadriga_rural -latent_dim 64 -ntrain 1500 -ntest 500</code></li>
   <li><code>python main_estimation_lmmse.py -ds cdl_e -ntrain 1500 -ntest 500 -snr_db 10</code></li>
 </ul>
 

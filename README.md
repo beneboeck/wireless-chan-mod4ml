@@ -71,7 +71,7 @@ All main-files store the results in newly generated directories in the `results`
 
 <b> Requirements </b><br>
 
-Next to standard python package, you also require `torch`. We used  `python 3.10`, `pytorch 2.5.1` and `pytorch-cuda 12.1`.
+Next to standard python packages, you also require `torch`. We used  `python 3.10`, `pytorch 2.5.1` and `pytorch-cuda 12.1`.
 
 ## Toy Examples
 

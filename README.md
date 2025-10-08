@@ -52,11 +52,11 @@ To be able to run these scripts you need the quadriga_src code in `scenario_leve
 
  <b> Comment </b><br>
 
- Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and generated 80000 samples per channel model. It took about a day for each dataset to get generated.
+ Note that the generation of 50000 or more samples can take quite some time. We have executed the code on a regular CPU and generated 80000 samples per channel model. It took about a day for each dataset to get generated. These QuaDRiGa scripts have been also used in our <a href="https://openreview.net/forum?id=FFJFT93oa7">ICML25 Paper</a> (to see more details about the datasets).
 
 ## Applying Signal Processing and Machine Learning on the Datasets
 
-To run the scripts covering the autoencoder, the PCA, the LMMSE estimator, and the Gaussian sampling, you need to execute the <code>main_compression_autoencoder.py</code>, <code>main_compression_pca.py</code>, <code>main_estimation_lmmse.py</code>, and <code>main_generation_sCov.py</code>, respectively. Each of these scripts take parser arguments as input.
+To run the scripts covering the autoencoder, the PCA, the LMMSE estimator, and the Gaussian sampling, you need to execute the <code>main_compression_autoencoder.py</code>, <code>main_compression_pca.py</code>, <code>main_estimation_lmmse.py</code>, and <code>main_generation_sCov.py</code>, respectively. Each of these scripts take parser arguments as input. The autoencoder architecture has been also used in our <a href="https://openreview.net/forum?id=FFJFT93oa7">ICML25 Paper</a> (to see more details about the architecture).
 
 <ul>
   <li> <code>main_compression_autoencoder.py</code> takes the dataset (e.g., <code>quadriga_rural</code>, <code>tdl_a</code>, ...), the latent dimension, the number of training samples, the number of test samples and the device (e.g., <code>cpu</code>, <code>cuda:0</code>, <code>cuda:1</code>, ...) as parser arguments (Example: <code>python main_compression_autoencoder.py -ds quadriga_rural -latent_dim 64 -ntrain 60000 -ntest 10000 -device cuda:0</code> </li>

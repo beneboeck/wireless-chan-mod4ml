@@ -5,10 +5,10 @@ Welcome to the repository for the paper "Wireless Channel Modeling for Machine L
 
 The provided code is split into different parts:
 <ul>
-  <li>Code for generating link-level (TDL and CDL) channel data (using the 5G Toolbox of Matlab)</li>
-  <li>Code for generating scenario-level (QuaDRiGa) channel data (using the QuaDRiGa source code)</li>
-  <li>Code for the Autoencoder applied to CSI compression.</li>
-  <li>Code for the linear methods, i.e., the PCA, the LMMSE estimator, and the sample covariance Gaussian sampling.</li>
+  <li>Code for generating link-level (TDL and CDL) channel data (using the 5G Toolbox of Matlab) (<code>MATLAB</code>)</li>
+  <li>Code for generating scenario-level (QuaDRiGa) channel data (using the QuaDRiGa source code) (<code>MATLAB</code>)</li>
+  <li>Code for the Autoencoder applied to CSI compression (<code>python</code>)</li>
+  <li>Code for the linear methods, i.e., the PCA, the LMMSE estimator, and the sample covariance Gaussian sampling (<code>python</code>)</li>
 </ul>
 The diffusion model estimator is not part of the code, but we used the implementation from <a href="https://github.com/benediktfesl/Diffusion_channel_est">this repository</a>. Moreover, we refer to the <a href="https://www.deepmimo.net/">DeepMIMO website </a> for the DeepMIMO data generation.
 

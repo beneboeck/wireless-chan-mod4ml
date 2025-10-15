@@ -1,6 +1,25 @@
 # Wireless Channel Modeling for Machine Learning - <br> A Critical View on Standardized Channel Models
 Welcome to the repository for the paper "Wireless Channel Modeling for Machine Learning - A Critical View on Standardized Channel Models". 
 
+## Citation
+
+<a href="https://arxiv.org/abs/2510.12279">Here</a> you find a link to a pre-print of our work.
+
+If you use this code for your research, please cite
+
+```bibtex
+@misc{boeck2025wireless_ch_mod4ml,
+      title={Wireless Channel Modeling for Machine Learning - A Critical View on Standardized Channel Models}, 
+      author={Benedikt B\"ock and Amar Kasibovic and Wolfgang Utschick},
+      year={2025},
+      eprint={2510.12279},
+      archivePrefix={arXiv},
+      primaryClass={eess.SP},
+      note = {arXiv:2510.12279},
+      url={https://arxiv.org/abs/2510.12279}, 
+}
+```
+
 ## Overview
 
 The provided code is split into different parts:

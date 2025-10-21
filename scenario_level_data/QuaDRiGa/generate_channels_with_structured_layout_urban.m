@@ -72,7 +72,7 @@ for i_process = 1:rep_factor
     % mobile terminals
     % create a uniform linear array with dipole antennas
     l.rx_array = qd_arrayant('omni');
-    l_olut.rx_array.no_elements = ms_no_horizontal_elements;
+    l.rx_array.no_elements = ms_no_horizontal_elements;
     for i = 1:l.rx_array.no_elements
         l.rx_array.element_position(:, i) = [(i-1)*s.wavelength/2; 0; 0];
     end

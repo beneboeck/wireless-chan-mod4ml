@@ -3,9 +3,9 @@ Welcome to the repository for the paper "Wireless Channel Modeling for Machine L
 
 ## Citation
 
-<a href="https://arxiv.org/abs/2510.12279">Here</a> you find a link to a pre-print of our work.
+<a href="https://arxiv.org/abs/2510.12279v2">Here</a> you find a link to a pre-print of our work.
 
-If you use this code for your research, please cite
+If you use this code for your research, please cite our pre-print
 
 ```bibtex
 @misc{boeck2025wireless_ch_mod4ml,
